@@ -1,12 +1,19 @@
 'use strict'
 
-function createImage(image) {
+function createImage(imageObject) {
     const gallery = document.getElementById('gallery')
+    const image = document.createElement('div')
 
     const img = document.createElement('img')
-    img.src = image.url
+    const p = document.createElement('p')
 
-    gallery.appendChild(img)
+    img.src = imageObject.url
+    p.textContent = imageObject.nome
+
+    image.appendChild(img)
+    image.appendChild(p)
+
+    gallery.appendChild(image)
 }
 
 function loadImages() {
@@ -16,11 +23,11 @@ function loadImages() {
         },
         {
             nome: 'Homem Aranha 2',
-            url: './assets/img/homem-aranha2.jpg'
+            url: './assets/img/homem-aranha7.jpg'
         },
         {
             nome: 'Homem Aranha 3',
-            url: './assets/img/homem-aranha3.jpg'
+            url: './assets/img/homem-aranha6.jpg'
         },
         {
             nome: 'Homem Aranha 4',
@@ -32,11 +39,11 @@ function loadImages() {
         },
         {
             nome: 'Homem Aranha 6',
-            url: './assets/img/homem-aranha6.jpg'
+            url: './assets/img/homem-aranha3.jpg'
         },
         {
             nome: 'Homem Aranha 7',
-            url: './assets/img/homem-aranha7.jpg'
+            url: './assets/img/homem-aranha2.jpg'
         },
         {
             nome: 'Homem Aranha 8',
